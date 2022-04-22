@@ -7,7 +7,8 @@ import Rating from "./Rating";
 const Hero = () => {
   const {
     state: { vans },
-    vanstate: { byRating },
+    dispatch,
+    vanstate: { byRating, searchQuery },
   } = VanState();
 
   const transformVans = () => {
@@ -17,23 +18,29 @@ const Hero = () => {
       products = products.filter((prod) => prod.rate >= byRating);
     }
 
+    if (searchQuery) {
+      products = products.filter((prod) => {
+        return prod.title.toLowerCase().includes(searchQuery);
+      });
+    }
+
     return products;
   };
   return (
-    <div className="flex">
-      <div className="sidebar">
+    <div className="flex pt-24">
+      <div className="sidebar bg-green-100">
         <Filter />
       </div>
       <div className="main">
         {transformVans().map((van) => {
           return (
             <div key={van.id} className=" my-4 bg-white rounded-xl shadow-md">
-              <div className="flex justify-between align-middle">
+              <div className="flex justify-between items-center">
                 <div className="h-full">
                   <img
-                    className="h-48 w-full object-cover rounded md:h-full md:w-48"
+                    className="h-48 w-72 object-cover rounded"
                     src={van.image}
-                    alt="Man looking at item at a store"
+                    alt={van.title}
                   />
                 </div>
                 <div className="p-8">
@@ -53,6 +60,12 @@ const Hero = () => {
                   <button
                     disabled={van.booked}
                     className="btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
+                    onClick={() => {
+                      dispatch({
+                        type: "ADD_VAN",
+                        payload: van,
+                      });
+                    }}
                   >
                     {van.booked === true ? "already booked" : "book now"}
                   </button>
