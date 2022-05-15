@@ -56,10 +56,10 @@ const Hero = () => {
                   <Rating rating={van.rate} />
                 </div>
                 <div>{van.booked ? <p>booked</p> : <p>available</p>}</div>
-                <div>
+                <div className="px-4">
                   <button
                     disabled={van.booked}
-                    className="btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
+                    className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
                     onClick={() => {
                       dispatch({
                         type: "ADD_VAN",

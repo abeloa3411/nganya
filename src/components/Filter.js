@@ -17,6 +17,16 @@ const Filter = () => {
             })
           }
         />
+        <div className="flex my-4 items-center">
+          <p>Seats</p>
+          <select className="p-2 mx-2 rounded bg-white">
+            <select>choose no.</select>
+            <option>4</option>
+            <option>8</option>
+            <option>12</option>
+            <option>14</option>
+          </select>
+        </div>
         <div>
           <button
             className="btn rounded py-2 px-4 bg-white hover:bg-slate-300 ease-in-out text-black"

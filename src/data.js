@@ -47,7 +47,7 @@ export const vansArr = [
   {
     id: 6,
     title: "Cleandawg",
-    capacity: 3,
+    capacity: 4,
     image: require("./images/mat6.jpg"),
     rate: 4,
     booked: true,
@@ -65,7 +65,7 @@ export const vansArr = [
   {
     id: 8,
     title: "Talldawg",
-    capacity: 9,
+    capacity: 12,
     image: require("./images/mat8.jpg"),
     rate: 3,
     price: 13000.0,

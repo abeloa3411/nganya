@@ -41,9 +41,9 @@ const Header = () => {
             }}
           />
         </div>
-        <div className="flex align-middle">
-          <div className="pt-2">
-            <p>{van.length}</p>
+        <div className="flex items-center">
+          <div className="pt-2 flex items-center">
+            <p className="px-2">{van.length}</p>
             <Link to="/booking">
               <FaShuttleVan style={{ fontSize: "25px" }} />
             </Link>

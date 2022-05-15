@@ -2,6 +2,11 @@ export const vanreducer = (state, action) => {
   switch (action.type) {
     case "ADD_VAN":
       return { ...state, van: [...state.van, { ...action.payload }] };
+    case "REMOVE_VAN":
+      return {
+        ...state,
+        van: state.van.filter((item) => item.id !== action.payload.id),
+      };
     default:
       return state;
   }
@@ -9,8 +14,6 @@ export const vanreducer = (state, action) => {
 
 export const productReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_VAN":
-      return { ...state, van: [...state.van, { ...action.payload }] };
     case "FILTER_BY_RATE":
       return { ...state, byRating: action.payload };
     case "FILTER_BY_SEARCH":
