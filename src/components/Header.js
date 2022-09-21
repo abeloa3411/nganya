@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShuttleVan } from "react-icons/fa";
+import { FiUser } from "react-icons/fi";
 import { VanState } from "../context/Context";
 
 const Header = () => {
@@ -48,8 +49,9 @@ const Header = () => {
               <FaShuttleVan style={{ fontSize: "25px" }} />
             </Link>
           </div>
-          <div className="px-4 py-2 transition ease-in-out cursor-pointer rounded hover:bg-slate-300">
-            <Link to="/contacts">Contacts</Link>
+          <div className="flex items-center ml-2 px-4 py-2 transition ease-in-out cursor-pointer rounded hover:bg-slate-300">
+            <Link to="/login">Login</Link>
+            <FiUser />
           </div>
         </div>
       </div>
