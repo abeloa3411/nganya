@@ -3,6 +3,7 @@ import { VanState } from "../context/Context";
 import "../style.css";
 import Filter from "./Filter";
 import Rating from "./Rating";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const {
@@ -57,18 +58,20 @@ const Hero = () => {
                 </div>
                 <div>{van.booked ? <p>booked</p> : <p>available</p>}</div>
                 <div className="px-4">
-                  <button
-                    disabled={van.booked}
-                    className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
-                    onClick={() => {
-                      dispatch({
-                        type: "ADD_VAN",
-                        payload: van,
-                      });
-                    }}
-                  >
-                    {van.booked === true ? "already booked" : "book now"}
-                  </button>
+                  <Link to="/booking">
+                    <button
+                      disabled={van.booked}
+                      className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
+                      onClick={() => {
+                        dispatch({
+                          type: "ADD_VAN",
+                          payload: van,
+                        });
+                      }}
+                    >
+                      {van.booked === true ? "already booked" : "book now"}
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
