@@ -58,16 +58,16 @@ const Hero = () => {
                 </div>
                 <div>{van.booked ? <p>booked</p> : <p>available</p>}</div>
                 <div className="px-4">
-                  <Link to="/booking">
+                  <Link to={`/single/${van.id}`}>
                     <button
                       disabled={van.booked}
                       className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
-                      onClick={() => {
-                        dispatch({
-                          type: "ADD_VAN",
-                          payload: van,
-                        });
-                      }}
+                      // onClick={() => {
+                      //   dispatch({
+                      //     type: "ADD_VAN",
+                      //     payload: van,
+                      //   });
+                      // }}
                     >
                       {van.booked === true ? "already booked" : "book now"}
                     </button>

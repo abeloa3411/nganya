@@ -20,7 +20,7 @@ const Filter = () => {
         <div className="flex my-4 items-center">
           <p>Seats</p>
           <select className="p-2 mx-2 rounded bg-white">
-            <select>choose no.</select>
+            <option>choose no.</option>
             <option>4</option>
             <option>8</option>
             <option>12</option>

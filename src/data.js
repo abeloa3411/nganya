@@ -1,6 +1,6 @@
 export const vansArr = [
   {
-    id: 1,
+    id: 0,
     title: "Bulldawg",
     capacity: 8,
     image: require("./images/mat1.jpeg"),
@@ -9,7 +9,7 @@ export const vansArr = [
     price: 12000.0,
   },
   {
-    id: 2,
+    id: 1,
     title: "Topdawg",
     capacity: 9,
     image: require("./images/mat2.jpg"),
@@ -18,7 +18,7 @@ export const vansArr = [
     price: 12000.0,
   },
   {
-    id: 3,
+    id: 2,
     title: "Wardawg",
     capacity: 14,
     image: require("./images/mat3.jpg"),
@@ -27,7 +27,7 @@ export const vansArr = [
     price: 15000.0,
   },
   {
-    id: 4,
+    id: 3,
     title: "Politedawg",
     capacity: 8,
     image: require("./images/mat4.jpg"),
@@ -36,7 +36,7 @@ export const vansArr = [
     price: 12000.0,
   },
   {
-    id: 5,
+    id: 4,
     title: "Killerdawg",
     capacity: 14,
     image: require("./images/mat5.png"),
@@ -45,7 +45,7 @@ export const vansArr = [
     price: 17000.0,
   },
   {
-    id: 6,
+    id: 5,
     title: "Cleandawg",
     capacity: 4,
     image: require("./images/mat6.jpg"),
@@ -54,7 +54,7 @@ export const vansArr = [
     price: 9000.0,
   },
   {
-    id: 7,
+    id: 6,
     title: "Bigdawg",
     capacity: 8,
     image: require("./images/mat7.jpeg"),
@@ -63,7 +63,7 @@ export const vansArr = [
     price: 12000.0,
   },
   {
-    id: 8,
+    id: 7,
     title: "Talldawg",
     capacity: 12,
     image: require("./images/mat8.jpg"),
@@ -71,7 +71,7 @@ export const vansArr = [
     price: 13000.0,
   },
   {
-    id: 9,
+    id: 8,
     title: "Gyalisdawg",
     capacity: 8,
     image: require("./images/mat9.png"),
@@ -80,7 +80,7 @@ export const vansArr = [
     price: 12000.0,
   },
   {
-    id: 10,
+    id: 9,
     title: "Shydawg",
     capacity: 4,
     image: require("./images/mat10.jpg"),
