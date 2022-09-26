@@ -6,15 +6,16 @@ const Van = createContext();
 
 const Context = ({ children }) => {
   const vans = vansArr.map(
-    ({ id, title, image, price, capacity, rate, booked }) => {
+    ({ id, title, image, price, capacity, rate, booked, description }) => {
       return {
-        id: id,
-        title: title,
-        image: image,
-        price: price,
-        capacity: capacity,
-        rate: rate,
-        booked: booked,
+        id,
+        title,
+        image,
+        price,
+        description,
+        capacity,
+        rate,
+        booked,
       };
     }
   );

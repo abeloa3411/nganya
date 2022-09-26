@@ -4,6 +4,8 @@ export const vansArr = [
     title: "Bulldawg",
     capacity: 8,
     image: require("./images/mat1.jpeg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 4,
     booked: true,
     price: 12000.0,
@@ -13,6 +15,8 @@ export const vansArr = [
     title: "Topdawg",
     capacity: 9,
     image: require("./images/mat2.jpg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 4,
     booked: false,
     price: 12000.0,
@@ -22,6 +26,8 @@ export const vansArr = [
     title: "Wardawg",
     capacity: 14,
     image: require("./images/mat3.jpg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 3,
     booked: false,
     price: 15000.0,
@@ -31,6 +37,8 @@ export const vansArr = [
     title: "Politedawg",
     capacity: 8,
     image: require("./images/mat4.jpg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 5,
     booked: true,
     price: 12000.0,
@@ -40,6 +48,8 @@ export const vansArr = [
     title: "Killerdawg",
     capacity: 14,
     image: require("./images/mat5.png"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 4,
     booked: false,
     price: 17000.0,
@@ -49,6 +59,8 @@ export const vansArr = [
     title: "Cleandawg",
     capacity: 4,
     image: require("./images/mat6.jpg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 4,
     booked: true,
     price: 9000.0,
@@ -58,6 +70,8 @@ export const vansArr = [
     title: "Bigdawg",
     capacity: 8,
     image: require("./images/mat7.jpeg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 5,
     booked: false,
     price: 12000.0,
@@ -67,6 +81,8 @@ export const vansArr = [
     title: "Talldawg",
     capacity: 12,
     image: require("./images/mat8.jpg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 3,
     price: 13000.0,
   },
@@ -75,6 +91,8 @@ export const vansArr = [
     title: "Gyalisdawg",
     capacity: 8,
     image: require("./images/mat9.png"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 4,
     booked: false,
     price: 12000.0,
@@ -84,6 +102,8 @@ export const vansArr = [
     title: "Shydawg",
     capacity: 4,
     image: require("./images/mat10.jpg"),
+    description:
+      "This is a one of a kind box ma 3 designed with lots of top the industry quality and sound",
     rate: 5,
     booked: false,
     price: 15000.0,

@@ -16,3 +16,11 @@
 .booking {
   width: 70%;
 }
+
+.image {
+  width: 70%;
+  object-fit: cover;
+  background-position: center;
+  height: 500px;
+  border-radius: 8px;
+}

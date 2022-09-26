@@ -35,7 +35,10 @@ const Hero = () => {
       <div className="main">
         {transformVans().map((van) => {
           return (
-            <div key={van.id} className=" my-4 bg-white rounded-xl shadow-md">
+            <div
+              key={van.id}
+              className="w-full my-4 bg-white rounded-xl shadow-md"
+            >
               <div className="flex justify-between items-center">
                 <div className="h-full">
                   <img
