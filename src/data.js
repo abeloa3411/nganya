@@ -109,3 +109,36 @@ export const vansArr = [
     price: 15000.0,
   },
 ];
+
+export const places = [
+  {
+    id: 0,
+    name: "Nakuru",
+    image: require("./images/mat9.png"),
+  },
+  {
+    id: 1,
+    name: "Nairobi",
+    image: require("./images/mat9.png"),
+  },
+  {
+    id: 2,
+    name: "Elementaita",
+    image: require("./images/mat9.png"),
+  },
+  {
+    id: 3,
+    name: "Naivash",
+    image: require("./images/mat9.png"),
+  },
+  {
+    id: 4,
+    name: "Nanyuki",
+    image: require("./images/mat9.png"),
+  },
+  {
+    id: 5,
+    name: "Kisumu",
+    image: require("./images/mat9.png"),
+  },
+];

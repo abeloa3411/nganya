@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   return (
     <>
       <section>
@@ -13,9 +12,19 @@ const Login = () => {
             <form action="POST">
               <div>
                 <div>
-                  <h2>Login to your account</h2>
+                  <h2>Sign up your account</h2>
                 </div>
                 <div>
+                  <div>
+                    <label htmlFor="email">Full name</label>
+                    <input
+                      type="text"
+                      className="bg-sky-100 px-4 py-2 rounded "
+                      name="name"
+                      placeholder="Enter you full name"
+                      id="name"
+                    />
+                  </div>
                   <div>
                     <label htmlFor="email">Email</label>
                     <input
@@ -42,19 +51,16 @@ const Login = () => {
                     type="submit"
                     className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
                   >
-                    Login
+                    Sign up
                   </button>
                 </div>
               </div>
             </form>
           </div>
-          <p>
-            Dont have an account? <Link to="/signup">Sign up</Link>
-          </p>
         </div>
       </section>
     </>
   );
 };
 
-export default Login;
+export default Signup;

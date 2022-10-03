@@ -27,12 +27,14 @@ const SingleComponent = () => {
             <p className="text-2xl">Comments</p>
           </div>
           <div>
-            <input type="text" className="bg-sky-100 px-4 py-2" />
-            <button>Add comment</button>
+            <input type="text" className="bg-sky-100 px-4 py-2 mb-8" />
+            <button className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black">
+              Add comment
+            </button>
           </div>
         </div>
       </div>
-      <div className="my-8">
+      <div className="my-8 w-3/4 m-auto px-8">
         <Link to={"/booking"}>
           <button
             className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"

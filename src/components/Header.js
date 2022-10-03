@@ -31,7 +31,7 @@ const Header = () => {
           <div className="flex items-center justyfy-center">
             <ul className="mx-4">
               <li>
-                <Link to="/">Box</Link>
+                <Link to="/home">Box</Link>
               </li>
             </ul>
             <ul className="mx-4">
