@@ -1,9 +1,20 @@
 import React from "react";
-import { FiPauseCircle } from "react-icons/fi";
+import { FaCcAmazonPay } from "react-icons/fa";
+import { Ri24HoursLine, RiCustomerService2Fill } from "react-icons/ri";
 import Footer from "../components/Footer";
-import { places } from "../data";
+import { places, vansArr } from "../data";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
 
 const MainPage = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
       <section className="px-8">
@@ -29,7 +40,7 @@ const MainPage = () => {
             <div className="mr-8">
               <input
                 type="text"
-                placeholder="calender"
+                placeholder={`${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`}
                 className="bg-sky-100 px-4 py-2 rounded "
               />
             </div>
@@ -39,9 +50,11 @@ const MainPage = () => {
               </button>
             </div>
             <div>
-              <button className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black">
-                Search
-              </button>
+              <Link to="/home">
+                <button className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black">
+                  Search
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -50,7 +63,7 @@ const MainPage = () => {
         <div className="flex py-12 px-8">
           <div className="flex justify-center items-center p-4">
             <div className="pr-4">
-              <FiPauseCircle style={{ fontSize: "30px" }} />
+              <FaCcAmazonPay style={{ fontSize: "30px" }} />
             </div>
             <div>
               <h2 style={{ fontSize: "20px" }}>Flexible payments</h2>
@@ -59,7 +72,7 @@ const MainPage = () => {
           </div>
           <div className="flex justify-center items-center p-4">
             <div className="pr-4">
-              <FiPauseCircle style={{ fontSize: "30px" }} />
+              <RiCustomerService2Fill style={{ fontSize: "30px" }} />
             </div>
             <div>
               <h2 style={{ fontSize: "20px" }}>Great customer expirience</h2>
@@ -68,7 +81,7 @@ const MainPage = () => {
           </div>
           <div className="flex justify-center items-center p-4">
             <div className="pr-4">
-              <FiPauseCircle style={{ fontSize: "30px" }} />
+              <Ri24HoursLine style={{ fontSize: "30px" }} />
             </div>
             <div>
               <h2 style={{ fontSize: "20px" }}>24h services</h2>
@@ -78,12 +91,38 @@ const MainPage = () => {
         </div>
       </section>
       <section>
+        <div>
+          <div>
+            <h1 className="text-3xl">Check our fleet</h1>
+          </div>
+          <div>
+            <Slider {...settings}>
+              {vansArr.map((item) => {
+                return (
+                  <div>
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      style={{
+                        height: "80% ",
+                        width: "80%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+        </div>
+      </section>
+      <section>
         <div className="px-8 py-8">
           <div>
             <h2 className="text-2xl">Top destination</h2>
             <p>These are our top destinations</p>
           </div>
-          <div
+          <motion.div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3,1fr)",
@@ -95,15 +134,22 @@ const MainPage = () => {
           >
             {places.map((item) => {
               return (
-                <div
+                <motion.div
                   style={{
                     height: "300px",
                     width: "100%",
                     position: "relative",
                   }}
+                  initial={{ scale: 0 }}
+                  animate={{ rotate: 360, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 260,
+                    damping: 20,
+                  }}
                 >
                   <img
-                    src={require("../images/mat2.jpg")}
+                    src={item.image}
                     style={{
                       height: "100% ",
                       width: "100%",
@@ -125,10 +171,10 @@ const MainPage = () => {
                       <strong>Kenya</strong>
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </section>
       <section>

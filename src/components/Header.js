@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { IoIosHelp } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
-import { VanState } from "../context/Context";
 
 const Header = () => {
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", scrollNav);
-  }, []);
-
-  const scrollNav = () => {
-    if (window.scrollY >= 80) {
-      setScroll(true);
-    }
-    setScroll(false);
-  };
-  const {
-    vanDispatch,
-    state: { van },
-  } = VanState();
   return (
     <div className="fixed w-full">
       <div className="bg-green-100 p-6 bg-white shadow-lg flex justify-between items-center h-20">
@@ -42,11 +25,6 @@ const Header = () => {
             <ul className="mx-4">
               <li>
                 <Link to="/">Flights</Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link to="/">VIP</Link>
               </li>
             </ul>
           </div>

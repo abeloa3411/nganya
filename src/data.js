@@ -114,31 +114,31 @@ export const places = [
   {
     id: 0,
     name: "Nakuru",
-    image: require("./images/mat9.png"),
+    image: require("./images/nakuru.webp"),
   },
   {
     id: 1,
-    name: "Nairobi",
-    image: require("./images/mat9.png"),
+    name: "Maasai mara",
+    image: require("./images/maasai.webp"),
   },
   {
     id: 2,
-    name: "Elementaita",
-    image: require("./images/mat9.png"),
+    name: "Lamu",
+    image: require("./images/lamu.webp"),
   },
   {
     id: 3,
-    name: "Naivash",
-    image: require("./images/mat9.png"),
+    name: "Naivasha",
+    image: require("./images/naivasha.webp"),
   },
   {
     id: 4,
     name: "Nanyuki",
-    image: require("./images/mat9.png"),
+    image: require("./images/nanyuki.webp"),
   },
   {
     id: 5,
     name: "Kisumu",
-    image: require("./images/mat9.png"),
+    image: require("./images/kisumu.webp"),
   },
 ];
