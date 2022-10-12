@@ -17,21 +17,27 @@ const Login = () => {
                     <h2 className="text-2xl">Login to your account</h2>
                   </div>
                   <div>
-                    <div className="mb-4">
+                    <div
+                      className="mb-4"
+                      style={{ display: "flex", flexDirection: "column" }}
+                    >
                       <label htmlFor="email">Email</label>
                       <input
                         type="text"
-                        className="bg-sky-100 px-4 py-2 rounded "
+                        className="bg-sky-100 px-4 py-2 rounded my-4"
                         name="email"
                         placeholder="Enter email"
                         id="email"
                       />
                     </div>
-                    <div className="mb-4">
+                    <div
+                      className="mb-4"
+                      style={{ display: "flex", flexDirection: "column" }}
+                    >
                       <label htmlFor="password">Password</label>
                       <input
                         type="password"
-                        className="bg-sky-100 px-4 py-2 rounded "
+                        className="bg-sky-100 px-4 py-2 rounded my-4"
                         name="password"
                         placeholder="Enter password"
                         id="password"

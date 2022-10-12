@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { vansArr } from "../data";
-import { productReducer, vanreducer } from "./Reducers";
+import { productReducer, vanreducer, userReducer } from "./Reducers";
 
 const Van = createContext();
 
@@ -30,8 +30,21 @@ const Context = ({ children }) => {
     searchQuery: "",
   });
 
+  const [userState, userDispatch] = useReducer(userReducer, {
+    user: null,
+  });
+
   return (
-    <Van.Provider value={{ state, dispatch, vanstate, vanDispatch }}>
+    <Van.Provider
+      value={{
+        state,
+        dispatch,
+        vanstate,
+        vanDispatch,
+        userState,
+        userDispatch,
+      }}
+    >
       {children}
     </Van.Provider>
   );

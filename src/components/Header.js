@@ -5,7 +5,7 @@ import { FiUser } from "react-icons/fi";
 
 const Header = () => {
   return (
-    <div className="fixed w-full">
+    <div className="fixed w-full" style={{ zIndex: "99" }}>
       <div className="bg-green-100 p-6 bg-white shadow-lg flex justify-between items-center h-20">
         <div className="flex">
           <h2 className="text-3xl mr-2">

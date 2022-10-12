@@ -12,7 +12,7 @@ const MainPage = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
   return (
@@ -92,20 +92,23 @@ const MainPage = () => {
       </section>
       <section>
         <div>
-          <div>
-            <h1 className="text-3xl">Check our fleet</h1>
+          <div className="py-4 ml-6">
+            <h1 className="text-3xl text-center">Check our fleet</h1>
           </div>
           <div>
-            <Slider {...settings}>
+            <Slider
+              {...settings}
+              style={{ width: "97%", padding: "0 0 0 2rem" }}
+            >
               {vansArr.map((item) => {
                 return (
-                  <div>
+                  <div style={{}}>
                     <img
                       src={item.image}
                       alt={item.name}
                       style={{
-                        height: "80% ",
-                        width: "80%",
+                        height: "400px",
+                        width: "100%",
                         objectFit: "cover",
                       }}
                     />
@@ -119,8 +122,8 @@ const MainPage = () => {
       <section>
         <div className="px-8 py-8">
           <div>
-            <h2 className="text-2xl">Top destination</h2>
-            <p>These are our top destinations</p>
+            <h2 className="text-2xl my-4">Top destination</h2>
+            <p className="py-4">These are our top destinations</p>
           </div>
           <motion.div
             style={{
