@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   const {
     state: { vans },
-    dispatch,
     vanstate: { byRating, searchQuery },
   } = VanState();
 
@@ -65,12 +64,6 @@ const Hero = () => {
                     <button
                       disabled={van.booked}
                       className="bg-green-100 btn rounded py-2 px-4 hover:bg-slate-300 ease-in-out text-black"
-                      // onClick={() => {
-                      //   dispatch({
-                      //     type: "ADD_VAN",
-                      //     payload: van,
-                      //   });
-                      // }}
                     >
                       {van.booked === true ? "already booked" : "book now"}
                     </button>
