@@ -6,10 +6,8 @@ const Booking = () => {
 
   const {
     state: { van },
-    dispatch,
   } = VanState();
 
-  console.log(van);
   useEffect(() => {
     const totalPrice = van.reduce((tot, cur) => {
       return (tot += Number(cur.price));
@@ -20,7 +18,7 @@ const Booking = () => {
     <div className="pt-24 flex">
       <div className="booking ml-4">
         {van.map((item) => {
-          const { id, image, title, capacity, price } = item;
+          const { image, title, price } = item;
           return (
             <div className="flex p-6 font-mono">
               <div className="flex-none w-48 mb-10 relative z-10 before:absolute before:top-1 before:left-1 before:w-full before:h-full before:bg-teal-400">
